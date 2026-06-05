@@ -52,3 +52,38 @@ This migration provided hands-on understanding of how NoSQL databases differ acr
 ---
 
 ## Project Structure
+CloudSphere/
+├── register.php              # User registration
+├── login.php                 # User authentication
+├── logout.php                # Session management
+├── upload.php                # File upload handler
+├── view.php                  # File listing and management
+├── delete_file.php           # File deletion
+├── create_all_user_folders.php  # Initializes user storage folders
+└── includes/
+├── db_functions.php      # Firestore database operations
+└── signed_url.php        # Generates time-limited signed URLs
+---
+
+## Setup Instructions
+
+> This project runs on a live GCP environment. To run it yourself:
+
+1. Create a GCP project and enable: Compute Engine, Cloud Storage, Firestore, IAM
+2. Clone this repository onto your Compute Engine instance
+3. Install PHP and Composer on the instance
+4. Run `composer install` to install dependencies (generates the `vendor/` folder)
+5. In each file, replace the following placeholders with your actual values:
+   - `YOUR_BUCKET_NAME`
+   - `YOUR_GCP_PROJECT_ID`
+   - `YOUR_FIRESTORE_DATABASE`
+6. Configure IAM roles and VPC firewall rules as needed
+7. Access the app via the instance's public IP
+
+---
+
+## Author
+
+**[Your Name]**  
+B.E. Computer Engineering  
+[Your LinkedIn URL] | [Your GitHub URL]
